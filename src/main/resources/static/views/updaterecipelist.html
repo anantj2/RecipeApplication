@@ -1,0 +1,32 @@
+<div class="section">
+	<h3>{{headingTitle}}</h3>
+	<div>
+		<table class="tableBox">
+			<tr class="tableHeader">
+				<td>Date and time of creation</td>
+				<td>Veg/Non-Veg</td>
+				<td>Suitable for</td>
+				<td>Ingredients</td>
+				<td>Cooking Instructions</td>
+			</tr>
+			<tr ng-repeat="x in y">
+				<td><input type="text" id="id"
+					ng-model="x.createDateTime| date:'dd‐MM‐yyyy HH:mm'"
+					ng-disabled="true"
+					ng-value="{{x.createDateTime  | date:'dd‐MM‐yyyy HH:mm'}}" /></td>
+				<td><input type="text" id="dishType" ng-model="x.dishType"
+					value="{{x.dishType}}" style="width: 100px;" /></td>
+				<td><input type="number" id="noOfPeople" ng-model="x.noOfPeople"
+					value="{{x.noOfPeople}}" style="width: 100px;" /></td>
+				<td><input type="text" id="ingredient" ng-model="x.ingredient"
+					value="{{x.ingredient}}" /></td>
+				<td><input type="text" id="instructions"
+					ng-model="x.instructions" value="{{x.instructions}}" /></td>
+
+				<td><button type="button" name="Update recipe"
+						ng-click="updateRecipe(x.createDateTime,x.dishType,x.noOfPeople,x.ingredient,x.instructions,x.id)" style="width:100px;">Update
+						Recipe</button></td>
+			</tr>
+		</table>
+	</div>
+</div>

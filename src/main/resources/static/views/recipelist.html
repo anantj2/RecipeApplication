@@ -1,0 +1,21 @@
+<div class="section">
+	<h3>{{headingTitle}}</h3>
+	<div>
+		<table class="tableBox">
+			<tr class="tableHeader">
+				<td>Date and time of creation</td>
+				<td>Veg/Non-Veg</td>
+				<td>Suitable for</td>
+				<td>Ingredients</td>
+				<td>Cooking Instructions</td>
+			</tr>
+			<tr ng-repeat="x in y">
+				<td>{{x.createDateTime | date:'dd‐MM‐yyyy HH:mm'}}</td>
+				<td>{{x.dishType}}</td>
+				<td>{{x.noOfPeople}}</td>
+				<td>{{x.ingredient}}</td>
+				<td>{{x.instructions}}</td>
+			</tr>
+		</table>
+	</div>
+</div>
