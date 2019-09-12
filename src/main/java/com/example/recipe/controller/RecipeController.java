@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.recipe.application.RecipeService;
@@ -39,9 +38,9 @@ public class RecipeController {
         recipeservice.addRecipe(recipe);
     }
 
-    @PutMapping("/recipes/{recipeId}")
-    public void updateRecipe(@PathVariable String recipeId, @RequestBody Recipe recipe) {
-        recipeservice.updateRecipe(recipeId, recipe);
+    @PutMapping("/recipes")
+    public void updateRecipe(@RequestBody Recipe recipe) {
+        recipeservice.updateRecipe(recipe);
     }
 
     @DeleteMapping("/recipes/{recipeId}")

@@ -30,7 +30,7 @@ public class RecipeService {
 		recipeRepository.save(recipe);
 	}
 
-	public void updateRecipe(String id, Recipe recipe) {
+	public void updateRecipe(Recipe recipe) {
 		recipeRepository.save(recipe);
 	}
 

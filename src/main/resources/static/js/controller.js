@@ -32,9 +32,9 @@ app.controller('updateRecipeController', function($scope,$http,$location,$window
             });
 	
     $scope.updateRecipe = function(data1,data2,data3,data4,data5,data6){
-		var recipeJson = {createDateTime:new Date(),dishType:data2,noOfPeople:data3,ingredient:data4,instructions:data5,id:data6}; 
-		var url = "/recipes/"+data6;
-    $http.put(url, JSON.stringify(recipeJson)).then(function (response) {
+		var recipeJson = {createDateTime:new Date(),dishType:data2,noOfPeople:data3,ingredient:data4,instructions:data5,id:data6};
+		
+    $http.put("/recipes/", JSON.stringify(recipeJson)).then(function (response) {
     	if(response.status == 200){
     		alert("Recipe updated successfully !!");
     		window.location= "#/recipes";
